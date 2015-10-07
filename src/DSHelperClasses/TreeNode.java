@@ -23,6 +23,11 @@ public class TreeNode<T extends Comparable<T>> {
     {
         return this.val;
     }
+    public int CompareByVal(T data) {
+        return val.compareTo(data);
+
+    }
+
     public int compareTo(Object o) {
         TreeNode<T> currNode = (TreeNode) o;
         return val.compareTo(currNode.val);
