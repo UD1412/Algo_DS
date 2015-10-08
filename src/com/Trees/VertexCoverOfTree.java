@@ -4,59 +4,7 @@ package com.Trees;
  * Find thh Vertex cover of a Binary Tree
  */
 
-//Basic defintion of a tree node
-class Node
-{
-    int val;
-    Node left;
-    Node right;
-   public  Node(int val)
-    {
-        this.val = val;
-        this.left = null;
-        this.right = null;
 
-    }
-}
-
-//The Binary tree class
-class BinaryTree
-{
-    Node root;
-    public BinaryTree()
-    {
-        root = null;
-    }
-
-    //Creates a BST
-    public void addNode(int data){
-
-        Node nNode = new Node(data);
-
-        if(root == null){
-            root = nNode;
-            return ;
-        }
-        Node parent = null;
-        Node head = root;
-
-        while(head != null){
-            parent = head;
-            if(head.val < data){
-                head = head.right;
-            }else{
-                head = head.left;
-            }
-        }
-        if(parent.val < data){
-            parent.right = nNode;
-        }else{
-            parent.left = nNode;
-        }
-
-    }
-
-}
 
 //Finding teh Vertex cover of the Tree
 // It is based on the fact that if the parent is included in the vertex cover,
